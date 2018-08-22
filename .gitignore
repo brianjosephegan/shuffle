@@ -1,4 +1,7 @@
 .vs/**
+packages/**
 Shuffle/bin/**
 Shuffle/obj/**
 Shuffle/*.user
+Shuffle.Tests/bin/**
+Shuffle.Tests/obj/**

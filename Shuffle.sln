@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shuffle", "Shuffle\Shuffle.csproj", "{45FF0433-E8C0-4E67-8546-B7DCAA992D6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shuffle.Tests", "Shuffle.Tests\Shuffle.Tests.csproj", "{0681726D-E00F-46DD-BA98-727EB18C32F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{45FF0433-E8C0-4E67-8546-B7DCAA992D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45FF0433-E8C0-4E67-8546-B7DCAA992D6C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{45FF0433-E8C0-4E67-8546-B7DCAA992D6C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0681726D-E00F-46DD-BA98-727EB18C32F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0681726D-E00F-46DD-BA98-727EB18C32F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0681726D-E00F-46DD-BA98-727EB18C32F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0681726D-E00F-46DD-BA98-727EB18C32F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
