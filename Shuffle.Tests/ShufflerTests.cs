@@ -8,9 +8,15 @@ using NUnit.Framework;
 
 namespace Shuffle.Tests
 {
+    /// <summary>
+    /// Tests for the Shuffler class.
+    /// </summary>
     [TestFixture]
     public class ShufflerTests
     {
+        /// <summary>
+        /// Checks that a null deck is handled correctly.
+        /// </summary>
         [Test]
         public void Constructor_NullDeck()
         {
@@ -19,6 +25,9 @@ namespace Shuffle.Tests
             StringAssert.Contains("Deck cannot be null", ex.Message);
         }
 
+        /// <summary>
+        /// Checks that an empty deck is handled correctly.
+        /// </summary>
         [Test]
         public void Constructor_EmptyDeck()
         {
@@ -27,6 +36,9 @@ namespace Shuffle.Tests
             StringAssert.Contains("Deck cannot be empty", ex.Message);
         }
 
+        /// <summary>
+        /// Checks that a deck with a null card is handled correctly.
+        /// </summary>
         [Test]
         public void Constructor_NullCard()
         {
@@ -35,6 +47,9 @@ namespace Shuffle.Tests
             StringAssert.Contains("Deck cannot contain any null values", ex.Message);
         }
 
+        /// <summary>
+        /// Checks that the first card is returned after shuffling the deck.
+        /// </summary>
         [Test]
         public void Start_FirstCard()
         {
@@ -43,6 +58,9 @@ namespace Shuffle.Tests
             Assert.IsNotNull(shuffler.Start());
         }
 
+        /// <summary>
+        /// Checks that the next card is returned from the deck.
+        /// </summary>
         [Test]
         public void NextCard_Card()
         {
@@ -53,6 +71,9 @@ namespace Shuffle.Tests
             Assert.IsNotNull(shuffler.NextCard());
         }
 
+        /// <summary>
+        /// Checks that null is returned once the last card is used.
+        /// </summary>
         [Test]
         public void NextCard_LastCard()
         {

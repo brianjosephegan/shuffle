@@ -13,14 +13,14 @@ using Android.Widget;
 namespace Shuffle
 {
     /// <summary>
-    /// The logic for shuffling a deck of cards
+    /// The logic for shuffling a deck of cards.
     /// </summary>
     internal class Shuffler
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Kings.Game"/> class.
         /// </summary>
-        /// <param name="deck">Deck to use for the game</param>
+        /// <param name="deck">Deck to use for the game.</param>
         public Shuffler(IEnumerable<string> deck)
         {
             if (deck == null)
@@ -42,9 +42,9 @@ namespace Shuffle
         }
 
         /// <summary>
-        /// Starts the game
+        /// Starts the game.
         /// </summary>
-        /// <returns>The first card in the deck</returns>
+        /// <returns>The first card in the deck.</returns>
         public string Start()
         {
             currentDeck = ShuffleDeck(deck);
@@ -53,9 +53,9 @@ namespace Shuffle
         }
 
         /// <summary>
-        /// Returns the next card in the deck
+        /// Returns the next card in the deck.
         /// </summary>
-        /// <returns>The next card or null if no cards are left</returns>
+        /// <returns>The next card or null if no cards are left.</returns>
         public string NextCard()
         {
             if (currentDeck.MoveNext())
@@ -69,27 +69,27 @@ namespace Shuffle
         }
 
         /// <summary>
-        /// Shuffles the specified deck
+        /// Shuffles the specified deck.
         /// </summary>
-        /// <param name="deckToShuffle">The deck to shuffle</param>
-        /// <returns>A shuffled deck</returns>
+        /// <param name="deckToShuffle">The deck to shuffle.</param>
+        /// <returns>A shuffled deck.</returns>
         private IEnumerator<string> ShuffleDeck(IEnumerable<string> deckToShuffle)
         {
             return deckToShuffle.OrderBy(x => random.Next()).ToList().GetEnumerator();
         }
 
         /// <summary>
-        /// Current deck being used in the game
+        /// Current deck being used in the game.
         /// </summary>
         private IEnumerator<string> currentDeck;
 
         /// <summary>
-        /// The deck of cards to use for a game
+        /// The deck of cards to use for a game.
         /// </summary>
         private readonly IEnumerable<string> deck;
 
         /// <summary>
-        /// Random object used for shuffling the cards
+        /// Random object used for shuffling the cards.
         /// </summary>
         private readonly Random random = new Random();
     }
